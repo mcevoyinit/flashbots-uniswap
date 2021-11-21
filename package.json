@@ -1,0 +1,29 @@
+{
+  "name": "swaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@flashbots/ethers-provider-bundle": "^0.4.2",
+    "@truffle/hdwallet-provider": "^1.6.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "ganache-cli": "^6.12.2",
+    "package.json": "^2.0.1",
+    "truffle": "^5.4.19",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "sol-merger": "^3.1.0",
+    "verify-on-etherscan": "^1.2.1"
+  }
+}
