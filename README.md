@@ -37,15 +37,18 @@ These contracts are deployed on goerli and verified on etherscan
 - UniswapV2Factory: https://goerli.etherscan.io/address/0x714765FC755990ebeFFAF508d3B234ee70E2c80C#code
 - UniswapV2Router: https://goerli.etherscan.io/address/0xc4929b7088583780E51A9C9495feEE3f828faaC4#code
 - GattacaSwap: https://goerli.etherscan.io/address/0x5493F4b345c8efD6D3A9688Ac482624eb2A0c284#code
-
+- Gattaca1: https://goerli.etherscan.io/address/0x0116cA041E56c996Cd48A6C55E22f258ffD270DF#code
+- Gattaca2: https://goerli.etherscan.io/address/0x6887967A80B27ad56CC983681Cdf79290ef03E1B#code
 #### Client
 JS
+flashbots/javascript/
 - `vanilla-swap.js`: swaps via standard web3js transaction
 - `flashbot-swap.js`: swaps via flashbots js transaction
 
 Python
-- `flashbots/python/vanilla_swap.py`: swaps via standard web3py transaction 
-- `flashbots/python/flashbot_swap.py`: swaps via flashbots web3py transaction
+flashbots/python/
+- `vanilla_swap.py`: swaps via standard web3py transaction 
+- `flashbot_swap.py`: swaps via flashbots web3py transaction
 
 e.g https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 
@@ -79,13 +82,16 @@ multisol contracts/GattacaSwap.sol
 ``` 
 ### Perform swap
 
-run the script to perform the flash bot transaction
+run the scripts to perform the flash bot transaction (2/4 are in progress)
 ```shell script
+node flashbot/javascript/vanilla-swap.js
 node flashbot/javascript/flashbot-swap.js
+python flashbot/python/vanilla_swap.py
+python flashbot/python/flashbot_swap.py
 ```
-- You will see 2 transactions bundled together. 
+- You will see 3 transactions bundled together. 
 These are 3 calls to the `GattacaUniswap` contract calling the `swapMyTokens` function that interacts with the deployed Uniswap.
-- Here is a etherscan transaction example: https://goerli.etherscan.io/tx/0xf63e38a3bc7dca9802cac392bac02b67462776893a4e6caddcbed8e968652c0e
+- Here is a js flashbot etherscan transaction example: https://goerli.etherscan.io/tx/0xf63e38a3bc7dca9802cac392bac02b67462776893a4e6caddcbed8e968652c0e
 - Here's what should see when the transactions are bundled and persisted successfully.  
 ```shell script
 Simulation Success: {
