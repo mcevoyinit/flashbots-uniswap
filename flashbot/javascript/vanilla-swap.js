@@ -119,3 +119,5 @@ async function main() {
 }
 
 main();
+
+//TODO - Fix nonce to high issue
