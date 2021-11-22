@@ -1,7 +1,7 @@
 ## Flashbots via Uniswap
 ![Swap](swap.png)
 
-###Quick start
+### Quick start
 
 Start a ganache goerli fork
 ```
@@ -45,8 +45,9 @@ JS
 
 Python
 - `flashbots/python/vanilla_swap.py`: swaps via standard web3py transaction 
-https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 - `flashbots/python/flashbot_swap.py`: swaps via flashbots web3py transaction
+
+e.g https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 
 ##Deployment
 The `migration` scripts illustrate how these components are stitched together and deployed. Essentially they:
