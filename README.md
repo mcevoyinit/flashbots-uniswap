@@ -14,11 +14,11 @@ npx ganache-cli \
 Run `3_swap_e2e.js` which deploys uniswap contracts, custom contracts, mints required tokens, approve necessary transfers, adds liquidity and perform trades on the custom uniswap-integrated swap contract `GattacaSwap`:
 
 ```shell script
-truffle migrate -f 3 --to 3 --network goerli_fork 
+truffle migrate -f 3 --to 3 --network goerlifork 
 ```
 Once deployed, copy the output of the script into your `.env` file for the clients/flashbots to consume. You can inspect successful transactions via
 ```shell script
-truffle debug <txhash> --network goerli_fork
+truffle debug <txhash> --network goerlifork
 ```
 
 ### Design
