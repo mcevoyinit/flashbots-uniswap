@@ -1,7 +1,7 @@
 ## Flashbots via Uniswap
 ![Swap](swap.png)
 
-###Quick start
+### Quick start
 
 Start a ganache goerli fork
 ```
@@ -14,11 +14,11 @@ npx ganache-cli \
 Run `3_swap_e2e.js` which deploys uniswap contracts, custom contracts, mints required tokens, approve necessary transfers, adds liquidity and perform trades on the custom uniswap-integrated swap contract `GattacaSwap`:
 
 ```shell script
-truffle migrate -f 3 --to 3 --network mainnet_fork 
+truffle migrate -f 3 --to 3 --network goerlifork 
 ```
 Once deployed, copy the output of the script into your `.env` file for the clients/flashbots to consume. You can inspect successful transactions via
 ```shell script
-truffle debug <txhash> --network mainnet_fork
+truffle debug <txhash> --network goerlifork
 ```
 
 ### Design
@@ -45,8 +45,9 @@ JS
 
 Python
 - `flashbots/python/vanilla_swap.py`: swaps via standard web3py transaction 
-https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 - `flashbots/python/flashbot_swap.py`: swaps via flashbots web3py transaction
+
+e.g https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 
 ##Deployment
 The `migration` scripts illustrate how these components are stitched together and deployed. Essentially they:
