@@ -49,7 +49,7 @@ Python
 
 e.g https://goerli.etherscan.io/tx/0x475442f5f8772fa40b8edbbaf7ceed69b0601a0552b6b290001b8f1f19fbe6be
 
-##Deployment
+## Deployment
 The `migration` scripts illustrate how these components are stitched together and deployed. Essentially they:
                                             
 1. Deploy above contracts
